@@ -1,0 +1,82 @@
+.signinContainer {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 6rem);
+  background: linear-gradient(to top right, #a05e5e, #eed082);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.signinFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 30px;
+  flex: 1;
+}
+.signinForm {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+  /* align-items: flex-start; */
+}
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.formGroup > input {
+  all: unset;
+  padding: 0.5rem 0.8rem;
+  color: #a05e5e;
+  border: 0.5px solid #a05e5e;
+  border-radius: 30px;
+}
+.signinForm > button {
+  all: unset;
+  border-radius: 30px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background-color: #eed082;
+  box-shadow: 4px 4px 1px rgb(12, 11, 11);
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.signinForm > button:hover {
+  transform: translate(4px, 4px);
+  color: #fff;
+  background-color: #a05e5e;
+  box-shadow: none;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #fff;
+  justify-content: center;
+  padding: 1rem;
+  align-items: center;
+  flex: 1;
+}
+.formFooterText {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 976px) {
+  .signinContainer {
+    flex-direction: column;
+    border-radius: 30px;
+  }
+  .signinFormContainer {
+    border-radius: 30px;
+    flex: 1;
+  }
+  .heroSection {
+    flex: 0.7;
+  }
+}

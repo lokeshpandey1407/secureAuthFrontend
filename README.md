@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# User Authentication Application with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple user authentication application built with React. It allows users to sign up or sign in, with error notifications handled using `react-toastify`.
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+- **React**: Frontend JavaScript library for building user interfaces.
+- **react-toastify**: Library for showing toast notifications.
+- **fetch**: HTTP client for making API requests.
+- **CSS Modules**: Local scope CSS styling.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **User Signup**: Register new users with username, email, and password.
+- **User Signin**: Authenticate existing users with email and password.
+- **Error Handling**: Display informative toast notifications for validation errors and API request failures.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+Follow these steps to set up and run the application locally:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository:**
 
-### `npm run build`
+   git clone https://github.com/your-username/user-auth-app.git
+   cd user-auth-app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install the dependencies:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Run project:**
 
-### `npm run eject`
+npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Validation Rules and Security Considerations
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Form Input Validation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Username:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  - Required Field
+  - Example: `john_doe123`
 
-## Learn More
+- **Email:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  - Required field.
+  - Must be a valid email format (e.g., username@example.com).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Password:**
 
-### Code Splitting
+  - Required field.
+  - Minimum 8 characters long.
+  - Must include at least one uppercase letter, one lowercase letter, and one digit.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Client-Side Validation
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Client-side validation is implemented using custom validation functions in the form components. Validation errors are displayed using React tostify library.

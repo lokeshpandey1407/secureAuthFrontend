@@ -1,0 +1,23 @@
+.navbar {
+  height: 5rem;
+  display: flex;
+  padding: 0 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoutBtn {
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #a05e5e;
+  box-shadow: 4px 4px 1px rgb(12, 11, 11);
+  padding: 0.5rem 1rem;
+  transition: all 300ms ease-in-out;
+}
+.logoutBtn:hover {
+  transform: translate(4px, 4px);
+  color: #343434;
+  background-color: #eed082;
+  box-shadow: none;
+}

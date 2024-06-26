@@ -1,0 +1,10 @@
+.homeContainer {
+  height: 400px;
+  border-radius: 30px;
+  background-color: #fff;
+  margin-top: 4rem;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
