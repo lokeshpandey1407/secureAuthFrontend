@@ -36,7 +36,7 @@ const Signin = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        "https://secure-auth-uaev.vercel.app/api/auth/signin",
+        "https://secure-auth-backend.vercel.app/api/auth/signin",
         {
           method: "POST",
           headers: {
