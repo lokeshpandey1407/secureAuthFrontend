@@ -1,7 +1,7 @@
 .signupContainer {
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 6rem);
+  min-height: calc(100vh - 6rem);
   background: linear-gradient(to top right, #a05e5e, #eed082);
   border-radius: 30px;
   overflow: hidden;
