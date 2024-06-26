@@ -26,13 +26,16 @@ const Signup = () => {
     if (!userName || userName.trim() === "") {
       return;
     }
-    await fetch("https://secure-auth-uaev.vercel.app/api/auth/checkUserName", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ userName }),
-    })
+    await fetch(
+      "https://secure-auth-backend.vercel.app/api/auth/checkUserName",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userName }),
+      }
+    )
       .then((res) => res.json())
       .then((response) => {
         if (response.data.isPresent) {
@@ -46,7 +49,7 @@ const Signup = () => {
     if (!email || email.trim() === "") {
       return;
     }
-    await fetch("https://secure-auth-uaev.vercel.app/api/auth/checkEmail", {
+    await fetch("https://secure-auth-backend.vercel.app/api/auth/checkEmail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -90,7 +93,7 @@ const Signup = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        "https://secure-auth-uaev.vercel.app/api/auth/signup",
+        "https://secure-auth-backend.vercel.app/api/auth/signup",
         {
           method: "POST",
           headers: {
