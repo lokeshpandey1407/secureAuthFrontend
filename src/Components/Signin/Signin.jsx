@@ -35,13 +35,16 @@ const Signin = () => {
     }
     try {
       setIsLoading(true);
-      const response = await fetch("http://localhost:3001/api/auth/signin", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userInfo),
-      });
+      const response = await fetch(
+        "https://secureauthbackend.onrender.com/api/auth/signin",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userInfo),
+        }
+      );
 
       if (!response.ok) {
         const errorData = await response.json();
