@@ -3,6 +3,7 @@ import styles from "./Signup.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loader from "../Loader/Loader";
 
 const Signup = () => {
   const [userInfo, setuserInfo] = useState({
@@ -168,7 +169,7 @@ const Signup = () => {
             />
           </div>
           <button type="submit" onClick={handleSignup} disabled={isLoading}>
-            {isLoading ? "Creating your account..." : "Signup"}
+            {isLoading ? <Loader /> : "Signup"}
           </button>
           <p className={styles.formFooterText}>
             Already have an account ? <Link to={"/signin"}>Click here</Link>

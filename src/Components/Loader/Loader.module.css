@@ -1,0 +1,22 @@
+.loader {
+  height: 25px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-top-color: #a05e5e;
+  border-right-color: #a05e5e;
+  border-bottom-color: #a05e5e;
+  animation: loading 2s infinite ease-in-out;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

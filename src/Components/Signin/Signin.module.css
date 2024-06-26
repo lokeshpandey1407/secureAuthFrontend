@@ -40,6 +40,7 @@
   all: unset;
   border-radius: 30px;
   text-align: center;
+  align-self: center;
   padding: 0.5rem 1rem;
   background-color: #eed082;
   box-shadow: 4px 4px 1px rgb(12, 11, 11);
@@ -47,7 +48,7 @@
   transition: all 300ms ease-in-out;
 }
 .signinForm > button:disabled {
-  cursor: "not-allowed";
+  cursor: not-allowed;
 }
 .signinForm > button:hover {
   transform: translate(4px, 4px);
