@@ -52,7 +52,6 @@ const Signin = () => {
       } else {
         const data = await response.json();
         if (data.success) {
-          console.log(data);
           toast.success(data.message);
           localStorage.setItem("user_token", JSON.stringify(data.data));
           navigate("/home");
@@ -70,6 +69,7 @@ const Signin = () => {
       navigate("/home");
     }
   }, [navigate]);
+
   return (
     <div className={styles.signinContainer}>
       <div className={styles.heroSection}>
