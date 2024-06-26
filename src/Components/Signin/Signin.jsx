@@ -12,6 +12,7 @@ const Signin = () => {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
+  //handler function to change input
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setuserInfo((prev) => {
@@ -19,6 +20,7 @@ const Signin = () => {
     });
   };
 
+  //Sign in function to handle signin
   const handleSignin = async (e) => {
     e.preventDefault();
     if (userInfo.email === "" || userInfo.email === null) {
@@ -63,6 +65,7 @@ const Signin = () => {
       setIsLoading(false);
     }
   };
+
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem("user_token"));
     if (token) {

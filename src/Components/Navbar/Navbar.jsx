@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./Navbar.module.css";
 import { useNavigate } from "react-router-dom";
 
@@ -7,6 +7,7 @@ const Navbar = () => {
 
   const navigate = useNavigate();
 
+  //Signout function to handle signout functionality
   const handleSignout = () => {
     localStorage.removeItem("user_token");
     navigate("/signin");

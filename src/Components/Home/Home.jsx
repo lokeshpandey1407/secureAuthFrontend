@@ -6,6 +6,8 @@ const Home = () => {
   const [userInfo, setUserInfo] = useState({});
   const navigate = useNavigate();
   const token = JSON.parse(localStorage.getItem("user_token"));
+
+  //Decoding token to fetch token payload
   function decodeToken() {
     if (token) {
       const payload = token.split(".")[1];
@@ -15,6 +17,8 @@ const Home = () => {
     }
   }
 
+  //use Effect function to check if the token is present or not,
+  //if not present then user will be navigated to signin page
   useEffect(() => {
     if (!token) {
       navigate("/signin");

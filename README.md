@@ -21,8 +21,8 @@ Follow these steps to set up and run the application locally:
 
 1. **Clone the repository:**
 
-   git clone https://github.com/your-username/user-auth-app.git
-   cd user-auth-app
+   git clone https://github.com/lokeshpandey1407/secureAuthFrontend.git
+   cd secureAuthFrontend
 
 2. **Install the dependencies:**
 
