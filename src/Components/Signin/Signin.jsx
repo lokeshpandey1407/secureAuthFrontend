@@ -106,7 +106,7 @@ const Signin = () => {
               onChange={handleInputChange}
             />
           </div>
-          <button onClick={handleSignin}>
+          <button onClick={handleSignin} disabled={isLoading}>
             {isLoading ? "Signing you in..." : "Signin"}
           </button>
           <p className={styles.formFooterText}>
